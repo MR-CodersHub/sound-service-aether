@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHER CINEMATICS | Premium Home Theatre & Bespoke Audio Installation</title>
+  <meta name="description" content="Architectural home theatre design and precision audio installations. Specializing in bespoke private cinemas, Dolby Atmos surround sound, 4K laser projection, and whole-home soundscapes.">
+  <meta name="keywords" content="home theatre installation, private cinema, surround sound, Dolby Atmos, audiophile acoustics, 4k laser projector, luxury home audio">
+  <meta name="author" content="Aether Cinematics Studio">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AETHER CINEMATICS | Your Home. Your Private Cinema.">
+  <meta property="og:description" content="Custom home cinema architecture, acoustic engineering, and immersive audio installations designed around your living space.">
+  <meta property="og:image" content="assets/images/hero-cinema.jpg">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Navigation Bar
+       ======================================================================== -->
+  <header class="site-nav" id="main-nav">
+    <div class="container-wide nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" id="nav-brand-logo" aria-label="Aether Cinematics Home">
+        <div class="brand-icon">
+          <img src="./assets/images/logo.png" alt="aether-logo" style="height: 100%; width: 100%;">
+        </div>
+        <span class="brand-text">
+          AETHER
+        </span>
+      </a>
+
+      <!-- Center Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active" id="link-nav-home">Home</a>
+        <a href="#services" class="nav-link" id="link-nav-services">Services</a>
+        <a href="#gallery" class="nav-link" id="link-nav-gallery">Gallery</a>
+        <a href="#process" class="nav-link" id="link-nav-process">Process</a>
+        <a href="#why-us" class="nav-link" id="link-nav-why-us">About</a>
+        <a href="#technology" class="nav-link" id="link-nav-tech">Technology</a>
+        <a href="#consultation" class="nav-link" id="link-nav-contact">Contact</a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="nav-actions">
+
+        <!-- High-contrast Consultation Pill CTA -->
+        <a href="#consultation" class="btn btn-primary btn-sm" id="nav-cta-btn">Book a Consultation</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-drawer-links">
+      <a href="#hero" class="mobile-drawer-link">Home</a>
+      <a href="#services" class="mobile-drawer-link">Services</a>
+      <a href="#gallery" class="mobile-drawer-link">Gallery</a>
+      <a href="#process" class="mobile-drawer-link">Process</a>
+      <a href="#why-us" class="mobile-drawer-link">About & Precision</a>
+      <a href="#technology" class="mobile-drawer-link">Technology</a>
+      <a href="#consultation" class="mobile-drawer-link">Book a Consultation</a>
+    </div>
+    <div style="margin-top: auto; padding-top: 2rem;">
+      <a href="#consultation" class="btn btn-primary" style="width: 100%;">Schedule Private Showing</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         Hero Section (Directly inspired by Reference Visual Architecture)
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Understated Starfield Particles Canvas -->
+      <canvas id="hero-canvas"></canvas>
+
+      <!-- Reference-Inspired Concentric Glowing Sound-Wave / Projection Geometry -->
+      <div class="hero-concentric-container" aria-hidden="true">
+        <svg class="concentric-svg" viewBox="0 0 1000 1000" fill="none">
+          <defs>
+            <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#C4B5FD" stop-opacity="0.9" />
+              <stop offset="35%" stop-color="#A855F7" stop-opacity="0.6" />
+              <stop offset="65%" stop-color="#6525D9" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#050719" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="arcGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6525D9" stop-opacity="0.15" />
+              <stop offset="70%" stop-color="#A855F7" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#C4B5FD" stop-opacity="0.6" />
+            </linearGradient>
+            <linearGradient id="arcGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#101743" stop-opacity="0.3" />
+              <stop offset="60%" stop-color="#6525D9" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#A855F7" stop-opacity="0.8" />
+            </linearGradient>
+            <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="35" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Concentric Arched Bands Stepping Inward -->
+          <circle cx="850" cy="750" r="750" stroke="#101743" stroke-width="32" opacity="0.4" />
+          <circle cx="850" cy="750" r="660" stroke="#1E1B4B" stroke-width="48" opacity="0.5" />
+          <circle cx="850" cy="750" r="560" stroke="#31106A" stroke-width="64" opacity="0.6" />
+          <circle cx="850" cy="750" r="450" stroke="#4C1D95" stroke-width="72" opacity="0.75" />
+          <circle cx="850" cy="750" r="330" stroke="#6525D9" stroke-width="80" opacity="0.85" filter="url(#softGlow)" />
+          <circle cx="850" cy="750" r="210" stroke="#7C3AED" stroke-width="84" opacity="0.95" />
+          <circle cx="850" cy="750" r="110" stroke="#A855F7" stroke-width="70" opacity="0.95" />
+          <circle cx="850" cy="750" r="45" fill="#C4B5FD" filter="url(#softGlow)" opacity="0.9" />
+        </svg>
+      </div>
+
+      <div class="container-wide" style="position: relative; z-index: 5;">
+        <div class="hero-grid">
+          
+          <!-- Hero Typography Content -->
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="dot"></span>
+              <span>CINEMATIC ARCHITECTURE & SOUND DESIGN</span>
+            </div>
+
+            <h1 class="hero-title">
+              Your Home.
+              <span class="highlight">Your Private Cinema.</span>
+            </h1>
+
+            <p class="hero-desc">
+              Experience breathtaking visuals, immersive surround sound, and expertly integrated entertainment systems designed around your home.
+            </p>
+
+            <div class="hero-actions">
+              <!-- High-contrast Pill Button inspired by reference -->
+              <a href="#services" class="btn btn-primary" id="hero-btn-services">
+                <span>Explore Our Services</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#consultation" class="btn btn-secondary" id="hero-btn-consultation">
+                <span>Book a Consultation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Trust Metrics Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <div class="metric-num">320<span>+</span></div>
+            <div class="metric-label">Custom Private Cinemas Built</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">0.1<span>dB</span></div>
+            <div class="metric-label">Precision Acoustic Ray Calibration</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">100<span>%</span></div>
+            <div class="metric-label">Zero-Visible-Wire Architecture</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-num">24<span>/7</span></div>
+            <div class="metric-label">VIP Concierge & AV Systems Care</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Services Introduction Section
+         ======================================================================== -->
+    <section class="section-spacer services-section" id="services">
+      <div class="container">
+        
+        <div class="section-header-wrap">
+          <div>
+            <div class="eyebrow">DESIGNED AROUND YOUR EXPERIENCE</div>
+            <h2 class="section-title">Sound. Vision. Perfectly Integrated.</h2>
+          </div>
+          <p class="section-desc">
+            From dedicated cinema rooms to discreet whole-home audio, we design and install entertainment systems that fit your space, lifestyle, and listening preferences.
+          </p>
+        </div>
+
+        <!-- 4 Refined Editorial Cards (Asymmetric Grid) -->
+        <div class="services-grid">
+          
+          <!-- Service 1: Custom Home Theatre (Wide) -->
+          <article class="service-card service-card-wide" id="service-card-theatre">
+            <div class="service-card-image">
+              <span class="service-category-tag">Cinematic Spaces</span>
+              <img src="assets/images/hero-cinema.jpg" alt="Dedicated custom home cinema with tiered seating and acoustic walls" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Custom Home Theatre</h3>
+              <p class="service-desc">
+                Transform a dedicated room into a personal cinema with projection, screen selection, seating layouts, and acoustic planning engineered for Hollywood-standard picture and audio.
+              </p>
+              <div class="service-card-footer">
+                <a href="#consultation" class="service-explore-link">
+                  <span>Explore Service</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <span class="service-specs">Dolby Atmos &bull; DCI-P3 4K</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Surround Sound Installation (Compact) -->
+          <article class="service-card service-card-compact" id="service-card-surround">
+            <div class="service-card-image">
+              <span class="service-category-tag">Spatial Audio</span>
+              <img src="assets/images/service-surround.jpg" alt="Architectural surround sound speaker driver recessed flush into acoustic wall" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Surround Sound Installation</h3>
+              <p class="service-desc">
+                Experience immersive audio through carefully positioned speakers, subwoofers, and calibrated surround sound systems tailored precisely to your room's acoustic reflections.
+              </p>
+              <div class="service-card-footer">
+                <a href="#consultation" class="service-explore-link">
+                  <span>Explore Service</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <span class="service-specs">7.2.4 &bull; In-Wall Discrete</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Projector & Screen Installation (Compact Alt) -->
+          <article class="service-card service-card-compact-alt" id="service-card-projector">
+            <div class="service-card-image">
+              <span class="service-category-tag">Optics & Display</span>
+              <img src="assets/images/service-projector.jpg" alt="Ceiling recessed laser projector beaming onto micro-thin bezel screen" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Projector & Screen Installation</h3>
+              <p class="service-desc">
+                Get the right screen size, projector placement, image quality, and viewing experience for your room with motorized drop-down or fixed ambient-light-rejecting screens.
+              </p>
+              <div class="service-card-footer">
+                <a href="#consultation" class="service-explore-link">
+                  <span>Explore Service</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </a>
+                <span class="service-specs">Laser HDR &bull; ALR Fabric</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Whole-Home Audio (Wide Alt) -->
+          <article class="service-card service-card-wide-alt" id="service-card-whole-home">
+            <div class="service-card-image">
+              <span class="service-category-tag">Whole Estate</span>
+              <img src="assets/images/service-whole-home.jpg" alt="Architectural luxury residence with touch-screen smart audio control and hidden speakers" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Whole-Home Audio</h3>
+              <p class="service-desc">
+                Enjoy seamlessly integrated music and audio throughout your living spaces, outdoor terraces, and private suites with invisible architectural speakers and one-touch app or touch-panel control.
+              </p>
+              <div class="service-card-footer">
+                <a href="#consultation" class="service-explore-link">
+                  <span>Explore Service</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </a>
+                <span class="service-specs">Multi-Zone &bull; High-Res HiFi</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Featured Installations Section (Portfolio)
+         ======================================================================== -->
+    <section class="section-spacer portfolio-section" id="gallery">
+      <div class="container">
+
+        <div class="section-header-wrap">
+          <div>
+            <div class="eyebrow">BUILT FOR IMMERSION</div>
+            <h2 class="section-title">Entertainment, Reimagined.</h2>
+          </div>
+          <p class="section-desc">
+            Explore a curated selection of our bespoke residential installations, where acoustic science meets modern architectural design.
+          </p>
+        </div>
+
+        <!-- Asymmetric Layout: 1 Large Featured + 2 Supporting Stack -->
+        <div class="portfolio-grid">
+          
+          <!-- Large Project 1: The Private Cinema -->
+          <article class="project-large" id="project-private-cinema">
+            <a href="assets/images/consultation-cinema.jpg" data-lightbox-src="assets/images/consultation-cinema.jpg" data-lightbox-caption="The Private Cinema: Dedicated 16-seat luxury cinema room with fiber-optic star ceiling and custom 9.4.6 Dolby Atmos audio architecture." style="display:block; overflow:hidden;">
+              <img src="assets/images/consultation-cinema.jpg" alt="The Private Cinema: Dedicated luxury home theatre with tiered recliner seating and starlight ceiling" class="project-large-img" loading="lazy">
+            </a>
+            <div class="project-large-content">
+              <span class="project-badge">FEATURED INSTALLATION &bull; DEDICATED CINEMA</span>
+              <h3 class="project-title">The Private Cinema</h3>
+              <p class="project-desc">
+                A purpose-built luxury home theatre designed inside a subterranean estate retreat. Features acoustic decoupled walls, a custom micro-perforated 200-inch 4K screen with concealed front stage line-arrays, and motorized diamond-stitched leather recliners.
+              </p>
+              <div class="project-specs-list">
+                <span class="spec-pill">Dolby Atmos 9.4.6</span>
+                <span class="spec-pill">Native 4K Laser Projection</span>
+                <span class="spec-pill">Star Ceiling Illumination</span>
+                <span class="spec-pill">Trinnov Altitude32 Processor</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Supporting Projects Stack -->
+          <div class="project-sub-col">
+            
+            <!-- Project 2: The Living Room Experience -->
+            <article class="project-sub" id="project-living-room">
+              <a href="assets/images/project-living.jpg" data-lightbox-src="assets/images/project-living.jpg" data-lightbox-caption="The Living Room Experience: Discreet ceiling-recessed motorized projection and invisible surround sound in a luxury penthouse." style="display:block; overflow:hidden;">
+                <img src="assets/images/project-living.jpg" alt="The Living Room Experience: High-rise penthouse with motorized drop-down cinema screen" class="project-sub-img" loading="lazy">
+              </a>
+              <div class="project-sub-content">
+                <span class="project-badge">DISCREET ARCHITECTURAL INTEGRATION</span>
+                <h3 class="project-title">The Living Room Experience</h3>
+                <p class="project-desc">
+                  Discreet surround sound and large-screen entertainment engineered for an open-concept penthouse. The screen lowers whisper-quietly from ceiling reveal, leaving floor-to-ceiling city views untouched when not in use.
+                </p>
+                <div class="project-specs-list">
+                  <span class="spec-pill">Concealed Motorized Drop</span>
+                  <span class="spec-pill">In-Ceiling Directional Audio</span>
+                  <span class="spec-pill">Daylight ALR Optical Fabric</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: The Immersive Audio Room -->
+            <article class="project-sub" id="project-audio-room">
+              <a href="assets/images/project-acoustic.jpg" data-lightbox-src="assets/images/project-acoustic.jpg" data-lightbox-caption="The Immersive Audio Room: Two-channel reference audiophile listening sanctuary with sculpted timber diffusers." style="display:block; overflow:hidden;">
+                <img src="assets/images/project-acoustic.jpg" alt="The Immersive Audio Room: Audiophile sanctuary with reference floorstanding speakers and timber acoustic diffusers" class="project-sub-img" loading="lazy">
+              </a>
+              <div class="project-sub-content">
+                <span class="project-badge">AUDIOPHILE SANCTUARY</span>
+                <h3 class="project-title">The Immersive Audio Room</h3>
+                <p class="project-desc">
+                  Carefully integrated reference floorstanding speakers and mathematical quadratic-residue timber acoustic diffusers, creating a lifelike three-dimensional stereo soundstage for pure music listening.
+                </p>
+                <div class="project-specs-list">
+                  <span class="spec-pill">Custom Walnut Diffusers</span>
+                  <span class="spec-pill">Pure Class-A Monoblocks</span>
+                  <span class="spec-pill">Calibrated Sweet-Spot Seating</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="portfolio-action-footer">
+          <a href="#consultation" class="btn btn-secondary" id="btn-explore-gallery">
+            <span>Explore the Gallery & Case Studies</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Installation Process Section
+         ======================================================================== -->
+    <section class="section-spacer process-section" id="process">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <div class="eyebrow" style="justify-content: center;">ARCHITECTURAL METHODOLOGY</div>
+          <h2 class="section-title">From First Conversation to First Showing.</h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            Our white-glove four-stage installation framework guarantees pristine acoustic performance, seamless smart integration, and zero architectural compromise.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-line" aria-hidden="true"></div>
+
+          <!-- Step 1 -->
+          <div class="process-card">
+            <div class="process-marker">01</div>
+            <h3 class="process-step-title">Discover</h3>
+            <p class="process-step-desc">
+              Understand your room, preferences, budget, and entertainment goals through an on-site architectural walkthrough and acoustic baseline analysis.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-card">
+            <div class="process-marker">02</div>
+            <h3 class="process-step-title">Design</h3>
+            <p class="process-step-desc">
+              Plan the system, equipment, placement, acoustics, and integration with 3D ray-tracing simulations, sightline modeling, and custom CAD schematics.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-card">
+            <div class="process-marker">03</div>
+            <h3 class="process-step-title">Install</h3>
+            <p class="process-step-desc">
+              Professionally install and configure your selected equipment with decoupled vibration dampening, structured concealment, and pristine cable management.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-card">
+            <div class="process-marker">04</div>
+            <h3 class="process-step-title">Calibrate</h3>
+            <p class="process-step-desc">
+              Fine-tune the picture, sound, and system controls for your space using multi-point reference microphones and optical colorimetry spectrometers.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="process-footer-cta">
+          <a href="#consultation" class="btn btn-primary" id="btn-process-start">Start Your Project</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Why Choose Us Section
+         ======================================================================== -->
+    <section class="section-spacer why-section" id="why-us">
+      <div class="container">
+        <div class="why-grid">
+          
+          <!-- Visual Column with Floating Accents -->
+          <div class="why-visual-wrap">
+            <img src="assets/images/hero-cinema.jpg" alt="Precision cinema installation with architectural acoustic wood panels" class="why-visual-img" loading="lazy">
+            <div class="why-floating-stat">
+              <div class="floating-stat-item">
+                <div class="floating-stat-val">THX & ISF</div>
+                <div class="floating-stat-lbl">Certified Calibration</div>
+              </div>
+              <div class="floating-stat-item">
+                <div class="floating-stat-val">15+ Yrs</div>
+                <div class="floating-stat-lbl">Acoustic Mastery</div>
+              </div>
+              <div class="floating-stat-item">
+                <div class="floating-stat-val">Bespoke</div>
+                <div class="floating-stat-lbl">Custom Architecture</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Content Column -->
+          <div>
+            <div class="eyebrow">CRAFTSMANSHIP & INTEGRATION</div>
+            <h2 class="section-title">Precision Behind Every Experience.</h2>
+            <p class="section-desc">
+              We approach every private cinema and audio installation as an acoustic instrument and architectural showpiece. No generic packages, no exposed cables, and no compromises.
+            </p>
+
+            <div class="why-features-grid">
+              
+              <!-- Feature 1 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Tailored system design</h4>
+                  <p>Every component is specified specifically to match your room geometry, seating count, and aesthetic tastes.</p>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Thoughtful speaker placement</h4>
+                  <p>Rigorous multi-axis angular alignment ensures optimal sound coverage and pin-point spatial accuracy.</p>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Clean, professional installation</h4>
+                  <p>In-wall conduit routing, custom vibration-isolated brackets, and architectural flush finish.</p>
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Audio and video calibration</h4>
+                  <p>Dirac Live, Trinnov Optimizer, and 3D color lookup calibration align equipment to studio reference levels.</p>
+                </div>
+              </div>
+
+              <!-- Feature 5 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Smart control integration</h4>
+                  <p>One-touch cinema scenes dim lighting, close motorized drapery, and boot your sources seamlessly.</p>
+                </div>
+              </div>
+
+              <!-- Feature 6 -->
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Ongoing VIP support</h4>
+                  <p>Proactive firmware updates, remote diagnostic monitoring, and priority technical concierge care.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Equipment & Technology Section
+         ======================================================================== -->
+    <section class="section-spacer tech-section" id="technology">
+      <div class="container">
+        
+        <div class="section-header-wrap">
+          <div>
+            <div class="eyebrow">REFERENCE-GRADE ENGINEERING</div>
+            <h2 class="section-title">The Technology Behind the Experience.</h2>
+          </div>
+          <p class="section-desc">
+            We partner with the world's most prestigious audiovisual engineering labs to curate components that reproduce sound and picture with absolute fidelity.
+          </p>
+        </div>
+
+        <div class="tech-layout">
+          
+          <!-- Technology Categories Interactive Grid -->
+          <div class="tech-categories-grid">
+            
+            <!-- Category 1 -->
+            <div class="tech-card active" data-tech="amplifiers">
+              <div class="tech-card-header">
+                <span class="tech-card-title">AV Receivers & Amplifiers</span>
+                <span class="badge-tag">32-CH DSP</span>
+              </div>
+              <p class="tech-card-desc">High-current discrete amplification, Trinnov processors, and Dolby Atmos & DTS:X Pro decoding.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">Trinnov</span>
+                <span class="tech-tag">McIntosh</span>
+                <span class="tech-tag">StormAudio</span>
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="tech-card" data-tech="projectors">
+              <div class="tech-card-header">
+                <span class="tech-card-title">Projectors & Projection Screens</span>
+                <span class="badge-tag">8K LASER</span>
+              </div>
+              <p class="tech-card-desc">Barco & Sony native 4K laser projectors paired with Stewart Filmscreen micro-perforated acoustic screens.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">Barco</span>
+                <span class="tech-tag">Sony</span>
+                <span class="tech-tag">Stewart</span>
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="tech-card" data-tech="speakers">
+              <div class="tech-card-header">
+                <span class="tech-card-title">Surround Sound Speakers</span>
+                <span class="badge-tag">Beryllium</span>
+              </div>
+              <p class="tech-card-desc">Architectural in-wall line arrays and studio-grade monitors engineered for low distortion at cinema SPL.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">Wisdom Audio</span>
+                <span class="tech-tag">Focal</span>
+                <span class="tech-tag">Bowers & Wilkins</span>
+              </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="tech-card" data-tech="subwoofers">
+              <div class="tech-card-header">
+                <span class="tech-card-title">Subwoofers & Bass Management</span>
+                <span class="badge-tag">10Hz TACTILE</span>
+              </div>
+              <p class="tech-card-desc">Multiple opposing subwoofers with DSP boundary alignment to eliminate acoustic room nulls.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">JL Audio Gotham</span>
+                <span class="tech-tag">Perlisten</span>
+                <span class="tech-tag">Velodyne</span>
+              </div>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="tech-card" data-tech="treatments">
+              <div class="tech-card-header">
+                <span class="tech-card-title">Acoustic Treatments</span>
+                <span class="badge-tag">Absorption / Diffuse</span>
+              </div>
+              <p class="tech-card-desc">Custom micro-slotted architectural timber panels, bass traps, and fabric acoustic baffling.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">Artnovion</span>
+                <span class="tech-tag">Vicoustic</span>
+                <span class="tech-tag">Custom Wood</span>
+              </div>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="tech-card" data-tech="smart">
+              <div class="tech-card-header">
+                <span class="tech-card-title">Smart Home Control Systems</span>
+                <span class="badge-tag">Automated</span>
+              </div>
+              <p class="tech-card-desc">Crestron Home, Control4, and Lutron lighting/shade integration for seamless one-touch theatre scenes.</p>
+              <div class="tech-tag-row">
+                <span class="tech-tag">Crestron</span>
+                <span class="tech-tag">Control4</span>
+                <span class="tech-tag">Lutron Palladiom</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Technology Preview Display -->
+          <div class="tech-rack-display">
+            <img src="assets/images/hardware-tech.jpg" alt="Audiophile equipment rack with illuminated VU meters and discrete processing" id="tech-preview-img" class="tech-rack-img">
+            <div class="tech-rack-overlay">
+              <div>
+                <span class="badge-tag" id="tech-preview-badge">POWER & PROCESSING</span>
+                <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: #FFFFFF; margin-top: 0.4rem;" id="tech-preview-title">
+                  Multi-Channel High-Current Discrete Amplification
+                </h3>
+              </div>
+              <a href="#consultation" class="btn btn-secondary btn-sm" id="btn-discuss-setup">Discuss Your Setup</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Consultation Booking Banner (Full-Width Cinematic Visual)
+         ======================================================================== -->
+    <section class="consultation-banner" id="consultation-banner">
+      <img src="assets/images/consultation-cinema.jpg" alt="Atmospheric modern private screening room" class="consultation-bg-image" loading="lazy">
+      <div class="consultation-bg-overlay"></div>
+
+      <div class="container" style="position: relative; z-index: 5;">
+        <div class="consultation-content-wrap">
+          <div class="eyebrow">YOUR PRIVATE SCREENING AWAITS</div>
+          <h2 class="consultation-heading">
+            Let's Build Your<br>
+            <span class="text-gradient">Personal Cinema.</span>
+          </h2>
+          <p class="consultation-desc">
+            Tell us about your room, your vision, and how you love to watch and listen. We'll help you explore the right installation for your home.
+          </p>
+          <div class="consultation-actions">
+            <a href="#consultation" class="btn btn-primary" id="banner-book-cta">
+              <span>Book a Consultation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#consultation" class="btn btn-secondary" id="banner-contact-cta">
+              <span>Contact Our Team</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Contact and Consultation Form Section
+         ======================================================================== -->
+    <section class="section-spacer booking-form-section" id="consultation">
+      <div class="container">
+        <div class="form-layout">
+          
+          <!-- Contact Left Column -->
+          <div class="form-info-col">
+            <div class="eyebrow">PRIVATE ADVISORY</div>
+            <h3>Begin Your Acoustic Journey.</h3>
+            <p>
+              Whether you are designing a ground-up dedicated cinema, retrofitting a luxury living room, or outfitting an entire architectural estate with multi-room sound, our acoustic architects are at your service.
+            </p>
+
+            <div class="direct-contacts">
+              <div class="contact-card-mini">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-meta">
+                  <span>Concierge Hotline</span>
+                  <strong>+1 (800) 892-AURA (2872)</strong>
+                </div>
+              </div>
+
+              <div class="contact-card-mini">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-meta">
+                  <span>Direct Inquiries</span>
+                  <strong>bespoke@aethercinematics.com</strong>
+                </div>
+              </div>
+
+              <div class="contact-card-mini">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-meta">
+                  <span>Studio & Private Showroom</span>
+                  <strong>9440 Wilshire Blvd, Beverly Hills, CA</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Consultation Form Card -->
+          <div class="form-card">
+            <form id="consultation-form" novalidate>
+              <div class="form-grid">
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="client-name" class="form-label">
+                    Full Name <span class="req">*</span>
+                  </label>
+                  <input type="text" id="client-name" name="name" class="form-input" placeholder="e.g. Julian Montgomery" required>
+                  <span class="form-error-msg">Please enter your full name.</span>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="client-email" class="form-label">
+                    Email Address <span class="req">*</span>
+                  </label>
+                  <input type="email" id="client-email" name="email" class="form-input" placeholder="e.g. julian@estate.com" required>
+                  <span class="form-error-msg">Please enter a valid email address.</span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-group">
+                  <label for="client-phone" class="form-label">
+                    Phone Number <span class="req">*</span>
+                  </label>
+                  <input type="tel" id="client-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+                  <span class="form-error-msg">Please provide a valid contact number.</span>
+                </div>
+
+                <!-- Installation Type -->
+                <div class="form-group">
+                  <label for="installation-type" class="form-label">
+                    Installation Type <span class="req">*</span>
+                  </label>
+                  <select id="installation-type" name="installationType" class="form-select" required>
+                    <option value="" disabled selected>Select service focus...</option>
+                    <option value="theatre">Custom Home Theatre</option>
+                    <option value="surround">Surround Sound Installation</option>
+                    <option value="projector">Projector & Screen Installation</option>
+                    <option value="whole-home">Whole-Home Audio</option>
+                    <option value="multiple">Multiple Services</option>
+                    <option value="unsure">Not sure yet (Need advisory)</option>
+                  </select>
+                  <span class="form-error-msg">Please select an installation type.</span>
+                </div>
+
+                <!-- Preferred Consultation Date -->
+                <div class="form-group">
+                  <label for="consult-date" class="form-label">Preferred Date</label>
+                  <input type="date" id="consult-date" name="consultDate" class="form-input">
+                </div>
+
+                <!-- Project Location -->
+                <div class="form-group">
+                  <label for="project-location" class="form-label">Project Location (City / Zip)</label>
+                  <input type="text" id="project-location" name="location" class="form-input" placeholder="e.g. Beverly Hills / 90210">
+                </div>
+
+                <!-- Estimated Budget Range Chips -->
+                <div class="form-group form-group-full">
+                  <label class="form-label">Estimated Project Budget</label>
+                  <input type="hidden" id="budget-input" name="budget" value="$30k - $75k">
+                  <div class="budget-options-wrap">
+                    <div class="budget-chip" data-value="$15k - $30k">$15k &ndash; $30k</div>
+                    <div class="budget-chip active" data-value="$30k - $75k">$30k &ndash; $75k</div>
+                    <div class="budget-chip" data-value="$75k - $150k">$75k &ndash; $150k</div>
+                    <div class="budget-chip" data-value="$150k+">$150k+ (Bespoke)</div>
+                  </div>
+                </div>
+
+                <!-- Project Requirements / Message -->
+                <div class="form-group form-group-full">
+                  <label for="project-notes" class="form-label">Project Requirements & Room Vision</label>
+                  <textarea id="project-notes" name="notes" class="form-textarea" placeholder="Tell us about the room dimensions, intended use, preferred aesthetics, existing wiring, or specific audiovisual equipment you admire..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group form-group-full" style="margin-top: 1rem;">
+                  <button type="submit" class="btn btn-primary" id="submit-consultation-btn" style="width: 100%; padding: 1.1rem;">
+                    <span>Request Consultation</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                  <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem;">
+                    Strict confidentiality assured. Non-disclosure agreements available upon request.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Footer Section
+       ======================================================================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container-wide">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" aria-label="Aether Cinematics">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="brand-text">
+              AETHER <span class="brand-badge">STUDIO</span>
+            </span>
+          </a>
+          <p>
+            Architectural audiovisual engineering and bespoke private cinema installations. Merging acoustic precision, high-fidelity hardware, and cinema-quality immersion for the world's finest residences.
+          </p>
+          <div style="margin-top: 1.5rem;" class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Vimeo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.8 6.5c-.3 3.6-2.6 8.5-6.9 14.8-4.4 6.4-8.1 9.6-11.1 9.6-1.9 0-3.5-1.7-4.8-5.2-.9-3.2-1.7-6.4-2.5-9.6C-1.8 12.8-2.6 11-3.3 11c-.2 0-.9.4-2 1.3l-1.3-1.6c1.4-1.2 2.8-2.5 4.3-3.8 2.2-1.9 3.8-2.9 4.8-3 2.5-.2 4 1.4 4.6 4.9.7 4.1 1.2 6.7 1.6 7.6.9 2.2 2 3.3 3.2 3.3 1 0 2.2-.9 3.7-2.7 1.5-1.8 2.3-3.6 2.3-5.3 0-1.7-.5-2.6-1.5-2.6-.5 0-1.1.1-1.7.3 1-3.3 2.9-4.9 5.8-4.8 2.1.1 3.1 1.4 3 4z" transform="scale(0.7) translate(4, 2)"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services Column -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services" class="footer-link">Custom Home Theatre</a></li>
+            <li><a href="#services" class="footer-link">Surround Sound Systems</a></li>
+            <li><a href="#services" class="footer-link">Projector & ALR Screen</a></li>
+            <li><a href="#services" class="footer-link">Whole-Home Audio</a></li>
+            <li><a href="#technology" class="footer-link">Acoustic Room Tuning</a></li>
+            <li><a href="#technology" class="footer-link">Smart Lighting Scenes</a></li>
+          </ul>
+        </div>
+
+        <!-- Portfolio & Process -->
+        <div>
+          <h4 class="footer-col-title">Showcase</h4>
+          <ul class="footer-links-list">
+            <li><a href="#gallery" class="footer-link">The Private Cinema</a></li>
+            <li><a href="#gallery" class="footer-link">The Living Room</a></li>
+            <li><a href="#gallery" class="footer-link">The Audio Sanctuary</a></li>
+            <li><a href="#process" class="footer-link">Installation Process</a></li>
+            <li><a href="#why-us" class="footer-link">Acoustic Standards</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="#consultation" class="footer-link">Book a Consultation</a></li>
+            <li><a href="tel:+18008922872" class="footer-link">+1 (800) 892-AURA</a></li>
+            <li><a href="mailto:bespoke@aethercinematics.com" class="footer-link">bespoke@aether.com</a></li>
+            <li><a href="#consultation" class="footer-link">Beverly Hills Studio</a></li>
+            <li><a href="#consultation" class="footer-link">Private Showing</a></li>
+          </ul>
+        </div>
+
+        <!-- Service Areas -->
+        <div>
+          <h4 class="footer-col-title">Service Areas</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Serving private estates, penthouses, and luxury architectural residences nationwide:
+          </p>
+          <div class="service-cities-list">
+            <span class="city-badge">Beverly Hills</span>
+            <span class="city-badge">Aspen</span>
+            <span class="city-badge">Manhattan</span>
+            <span class="city-badge">Miami</span>
+            <span class="city-badge">Bel Air</span>
+            <span class="city-badge">London</span>
+            <span class="city-badge">Dubai</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 AETHER CINEMATICS LLC. All rights reserved. Architectural Sound & Vision.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+          <a href="#" class="footer-legal-link">Acoustic Specifications</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Search Modal Overlay
+       ======================================================================== -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true" aria-label="Search site">
+    <div class="modal-card search-modal-card">
+      <button class="modal-close-btn" id="search-modal-close" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #FFFFFF; margin-bottom: 1rem;">
+        Search Services & Installations
+      </h3>
+
+      <div class="search-input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="site-search-input" placeholder="Search home cinema, Dolby Atmos, projectors, acoustic..." autocomplete="off">
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <span style="font-size: 0.75rem; color: var(--lavender-soft); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Quick Queries</span>
+        <div class="search-quick-tags">
+          <button type="button" class="badge-tag search-quick-tag" data-term="Dolby Atmos">Dolby Atmos</button>
+          <button type="button" class="badge-tag search-quick-tag" data-term="Laser Projector">Laser Projector</button>
+          <button type="button" class="badge-tag search-quick-tag" data-term="Acoustic">Acoustic Panels</button>
+          <button type="button" class="badge-tag search-quick-tag" data-term="Whole-Home">Whole-Home</button>
+          <button type="button" class="badge-tag search-quick-tag" data-term="Private Cinema">Private Cinema</button>
+        </div>
+      </div>
+
+      <div id="search-results-list" style="max-height: 280px; overflow-y: auto;">
+        <!-- Filtered items injected by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Consultation Success Confirmation Modal
+       ======================================================================== -->
+  <div class="modal-backdrop" id="booking-confirmation-modal" role="dialog" aria-modal="true" aria-label="Consultation Request Confirmed">
+    <div class="modal-card" style="text-align: center;">
+      <button class="modal-close-btn" id="booking-confirmation-close" aria-label="Close confirmation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="success-icon-wrap">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="badge-tag" style="margin-bottom: 0.75rem;">REQUEST LOGGED</div>
+      <h3 style="font-family: var(--font-heading); font-size: 1.85rem; color: #FFFFFF; margin-bottom: 0.6rem;">
+        Consultation Scheduled
+      </h3>
+
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.8rem;">
+        Thank you, <strong id="confirm-client-name" style="color: #FFFFFF;">Client</strong>. Your private consultation request for <strong id="confirm-service-type" style="color: var(--lavender-soft);">Custom Installation</strong> has been assigned to our senior acoustic architectural director.
+      </p>
+
+      <div style="background: rgba(5, 7, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.75rem; text-align: left; font-size: 0.85rem;">
+        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+          <span style="color: var(--text-muted);">Reference ID:</span>
+          <span style="font-family: var(--font-mono); color: var(--purple-bright); font-weight: 700;" id="confirm-ref-code">#AET-4982</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
+          <span style="color: var(--text-muted);">Confirmation Sent:</span>
+          <span style="color: #FFFFFF;" id="confirm-client-email">email@domain.com</span>
+        </div>
+        <div style="display:flex; justify-content:space-between;">
+          <span style="color: var(--text-muted);">Concierge Callback:</span>
+          <span style="color: #FFFFFF;">Within 2 Business Hours</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="document.getElementById('booking-confirmation-modal').classList.remove('active'); document.body.style.overflow = '';" style="width: 100%;">
+        Return to Experience
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Image Lightbox Modal
+       ======================================================================== -->
+  <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Installation Preview">
+    <div class="modal-card lightbox-modal">
+      <button class="modal-close-btn" id="lightbox-close" aria-label="Close preview">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="Full installation preview" id="lightbox-image" class="lightbox-img">
+      </div>
+      <p id="lightbox-caption" style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem; text-align: center;"></p>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Controller -->
+  <script src="src/js/main.js"></script>
+</body>
+</html>
