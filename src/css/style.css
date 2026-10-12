@@ -937,123 +937,432 @@ ul, ol {
   background-color: var(--bg-primary);
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 2.2rem;
-  align-items: stretch;
-}
-
-/* Large Featured Project */
-.project-large {
-  grid-column: span 7;
-  position: relative;
-  border-radius: var(--radius-xl);
-  background: var(--bg-surface);
+/* Portfolio View Switcher */
+.portfolio-view-switch {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(16, 23, 67, 0.55);
   border: 1px solid var(--border-subtle);
-  overflow: hidden;
-  transition: all 0.4s var(--ease-smooth);
-  display: flex;
-  flex-direction: column;
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 4px;
 }
 
-.project-large:hover {
-  border-color: var(--border-medium);
-  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(101, 37, 217, 0.3);
+.portfolio-view-switch .view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-.project-large-img {
+.portfolio-view-switch .view-btn:hover {
+  color: #FFFFFF;
+}
+
+.portfolio-view-switch .view-btn.active {
+  background: var(--violet-electric);
+  color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(101, 37, 217, 0.4);
+}
+
+/* Common Card Media & Hover Zoom */
+.featured-card-media,
+.supporting-card-media {
+  position: relative;
   width: 100%;
-  height: 480px;
+  overflow: hidden;
+}
+
+.featured-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.featured-card-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.7s var(--ease-smooth);
 }
 
-.project-large:hover .project-large-img {
-  transform: scale(1.03);
+.supporting-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-smooth);
 }
 
-.project-large-content {
-  padding: 2.5rem;
-  background: linear-gradient(180deg, rgba(11, 16, 48, 0.4) 0%, rgba(11, 16, 48, 0.95) 100%);
+.project-featured-card:hover .featured-card-img,
+.supporting-project-card:hover .supporting-card-img {
+  transform: scale(1.04);
+}
+
+.project-badge-pill {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(5, 7, 25, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: var(--lavender-soft);
+}
+
+.media-hover-zoom {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(5, 7, 25, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.project-featured-card:hover .media-hover-zoom,
+.supporting-project-card:hover .media-hover-zoom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Layout Mode: Featured Bento (Default - ZERO Empty Space)
+   ========================================================================== */
+.portfolio-showcase-container.layout-featured {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 2rem;
 }
 
-/* Supporting Projects Stack */
-.project-sub-col {
-  grid-column: span 5;
-  display: flex;
-  flex-direction: column;
-  gap: 2.2rem;
-}
-
-.project-sub {
+/* Featured Large Project (Horizontal Split on Desktop) */
+.layout-featured .project-featured-card {
   position: relative;
   border-radius: var(--radius-xl);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: stretch;
   transition: all 0.4s var(--ease-smooth);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
-.project-sub:hover {
+.layout-featured .project-featured-card:hover {
   border-color: var(--border-medium);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 40px rgba(101, 37, 217, 0.25);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(101, 37, 217, 0.3);
 }
 
-.project-sub-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.6s var(--ease-smooth);
+.layout-featured .featured-card-media {
+  min-height: 460px;
+  height: 100%;
 }
 
-.project-sub:hover .project-sub-img {
-  transform: scale(1.04);
+.layout-featured .featured-card-media::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  background: linear-gradient(90deg, transparent 0%, rgba(11, 16, 48, 0.85) 100%);
+  pointer-events: none;
 }
 
-.project-sub-content {
-  padding: 1.75rem;
-  background: rgba(11, 16, 48, 0.85);
+.layout-featured .featured-card-body {
+  padding: 3rem 2.75rem;
+  background: var(--bg-surface);
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
-.project-badge {
+.featured-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lavender-soft);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.featured-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.featured-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Structured Key Specs 4-Box Grid */
+.featured-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.spec-card-mini {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(16, 23, 67, 0.55);
+  border: 1px solid rgba(40, 45, 80, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: border-color 0.25s ease;
+}
+
+.project-featured-card:hover .spec-card-mini {
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+.spec-card-mini .spec-label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   color: var(--lavender-soft);
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-.project-title {
+.spec-card-mini .spec-value {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: #FFFFFF;
 }
 
-.project-desc {
+.spec-card-mini .spec-sub {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.featured-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(40, 45, 80, 0.6);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.featured-meta-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Supporting Row: 2 Equal Columns Side-by-Side */
+.layout-featured .portfolio-supporting-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.supporting-project-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.supporting-project-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 40px rgba(101, 37, 217, 0.25);
+  transform: translateY(-4px);
+}
+
+.supporting-card-media {
+  height: 280px;
+}
+
+.supporting-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(11, 16, 48, 0.95) 100%);
+  pointer-events: none;
+}
+
+.supporting-card-body {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: rgba(11, 16, 48, 0.85);
+}
+
+.supporting-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.015em;
+}
+
+.supporting-desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
-.project-specs-list {
+.supporting-specs-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
+.supporting-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(40, 45, 80, 0.5);
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.supporting-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Layout Mode: 3-Card Equal Grid (Alternative View)
+   ========================================================================== */
+.portfolio-showcase-container.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.layout-grid .project-featured-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.layout-grid .project-featured-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 40px rgba(101, 37, 217, 0.25);
+  transform: translateY(-4px);
+}
+
+.layout-grid .featured-card-media {
+  height: 280px;
+}
+
+.layout-grid .featured-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(11, 16, 48, 0.95) 100%);
+  pointer-events: none;
+}
+
+.layout-grid .featured-card-body {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: rgba(11, 16, 48, 0.85);
+}
+
+.layout-grid .featured-title {
+  font-size: 1.45rem;
+}
+
+.layout-grid .featured-desc {
+  font-size: 0.9rem;
+}
+
+.layout-grid .featured-specs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.layout-grid .spec-card-mini {
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(16, 23, 67, 0.6);
+  border: 1px solid rgba(40, 45, 80, 0.8);
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.layout-grid .spec-card-mini .spec-label,
+.layout-grid .spec-card-mini .spec-sub {
+  display: none;
+}
+
+.layout-grid .spec-card-mini .spec-value {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+}
+
+.layout-grid .portfolio-supporting-row {
+  display: contents;
+}
+
+/* Portfolio Spec Pills */
 .spec-pill {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -1950,13 +2259,21 @@ ul, ol {
     grid-column: span 6;
   }
 
-  .project-large {
-    grid-column: span 12;
+  .layout-featured .project-featured-card {
+    grid-template-columns: 1fr;
   }
 
-  .project-sub-col {
-    grid-column: span 12;
-    flex-direction: row;
+  .layout-featured .featured-card-media {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .layout-featured .featured-card-body {
+    padding: 2.25rem 2rem;
+  }
+
+  .layout-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .process-grid {
@@ -2004,8 +2321,12 @@ ul, ol {
     grid-column: span 12;
   }
 
-  .project-sub-col {
-    flex-direction: column;
+  .layout-featured .portfolio-supporting-row {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-specs-grid {
+    grid-template-columns: 1fr;
   }
 
   .budget-options-wrap {

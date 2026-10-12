@@ -19,76 +19,14 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/theme.css">
 </head>
 <body>
 
   <!-- ========================================================================
-       Navigation Bar
+       Shared Navigation Bar (injected by src/js/navbar.js)
        ======================================================================== -->
-  <header class="site-nav" id="main-nav">
-    <div class="container-wide nav-container">
-      
-      <!-- Brand Logo -->
-      <a href="#hero" class="brand-logo" id="nav-brand-logo" aria-label="Aether Cinematics Home">
-        <div class="brand-icon">
-          <img src="./assets/images/logo.png" alt="aether-logo" style="height: 100%; width: 100%;">
-        </div>
-        <span class="brand-text">
-          AETHER
-        </span>
-      </a>
-
-      <!-- Center Links -->
-      <nav class="nav-links" aria-label="Primary Navigation">
-        <a href="#hero" class="nav-link active" id="link-nav-home">Home</a>
-        <a href="#services" class="nav-link" id="link-nav-services">Services</a>
-        <a href="#gallery" class="nav-link" id="link-nav-gallery">Gallery</a>
-        <a href="#process" class="nav-link" id="link-nav-process">Process</a>
-        <a href="#why-us" class="nav-link" id="link-nav-why-us">About</a>
-        <a href="#technology" class="nav-link" id="link-nav-tech">Technology</a>
-        <a href="#consultation" class="nav-link" id="link-nav-contact">Contact</a>
-      </nav>
-
-      <!-- Right Actions -->
-      <div class="nav-actions">
-
-        <!-- High-contrast Consultation Pill CTA -->
-        <a href="#consultation" class="btn btn-primary btn-sm" id="nav-cta-btn">Book a Consultation</a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile navigation menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="mobile-nav-drawer" id="mobile-drawer">
-    <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close navigation menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <div class="mobile-drawer-links">
-      <a href="#hero" class="mobile-drawer-link">Home</a>
-      <a href="#services" class="mobile-drawer-link">Services</a>
-      <a href="#gallery" class="mobile-drawer-link">Gallery</a>
-      <a href="#process" class="mobile-drawer-link">Process</a>
-      <a href="#why-us" class="mobile-drawer-link">About & Precision</a>
-      <a href="#technology" class="mobile-drawer-link">Technology</a>
-      <a href="#consultation" class="mobile-drawer-link">Book a Consultation</a>
-    </div>
-    <div style="margin-top: auto; padding-top: 2rem;">
-      <a href="#consultation" class="btn btn-primary" style="width: 100%;">Schedule Private Showing</a>
-    </div>
-  </div>
+  <div id="site-header"></div>
 
   <main>
     <!-- ========================================================================
@@ -314,71 +252,150 @@
             <div class="eyebrow">BUILT FOR IMMERSION</div>
             <h2 class="section-title">Entertainment, Reimagined.</h2>
           </div>
-          <p class="section-desc">
-            Explore a curated selection of our bespoke residential installations, where acoustic science meets modern architectural design.
-          </p>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 1rem;">
+            <p class="section-desc">
+              Explore a curated selection of our bespoke residential installations, where acoustic science meets modern architectural design.
+            </p>
+            <div class="portfolio-view-switch" id="portfolio-view-switch" aria-label="Layout view switcher">
+              <button type="button" class="view-btn active" data-view="featured" id="view-bento-btn" title="Featured Bento View">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+                <span>Featured Bento</span>
+              </button>
+              <button type="button" class="view-btn" data-view="grid" id="view-grid-btn" title="3-Card Equal Grid View">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="5.5" height="18" rx="1.5"/><rect x="9.25" y="3" width="5.5" height="18" rx="1.5"/><rect x="15.5" y="3" width="5.5" height="18" rx="1.5"/></svg>
+                <span>3-Card Grid</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <!-- Asymmetric Layout: 1 Large Featured + 2 Supporting Stack -->
-        <div class="portfolio-grid">
+        <!-- Balanced Portfolio Showcase (Zero Empty Space) -->
+        <div class="portfolio-showcase-container layout-featured" id="portfolio-showcase">
           
-          <!-- Large Project 1: The Private Cinema -->
-          <article class="project-large" id="project-private-cinema">
-            <a href="assets/images/consultation-cinema.jpg" data-lightbox-src="assets/images/consultation-cinema.jpg" data-lightbox-caption="The Private Cinema: Dedicated 16-seat luxury cinema room with fiber-optic star ceiling and custom 9.4.6 Dolby Atmos audio architecture." style="display:block; overflow:hidden;">
-              <img src="assets/images/consultation-cinema.jpg" alt="The Private Cinema: Dedicated luxury home theatre with tiered recliner seating and starlight ceiling" class="project-large-img" loading="lazy">
-            </a>
-            <div class="project-large-content">
-              <span class="project-badge">FEATURED INSTALLATION &bull; DEDICATED CINEMA</span>
-              <h3 class="project-title">The Private Cinema</h3>
-              <p class="project-desc">
-                A purpose-built luxury home theatre designed inside a subterranean estate retreat. Features acoustic decoupled walls, a custom micro-perforated 200-inch 4K screen with concealed front stage line-arrays, and motorized diamond-stitched leather recliners.
-              </p>
-              <div class="project-specs-list">
-                <span class="spec-pill">Dolby Atmos 9.4.6</span>
-                <span class="spec-pill">Native 4K Laser Projection</span>
-                <span class="spec-pill">Star Ceiling Illumination</span>
-                <span class="spec-pill">Trinnov Altitude32 Processor</span>
+          <!-- Large Flagship Project: The Private Cinema (Horizontal Split on Desktop) -->
+          <article class="project-featured-card" id="project-private-cinema">
+            <div class="featured-card-media">
+              <a href="assets/images/consultation-cinema.jpg" data-lightbox-src="assets/images/consultation-cinema.jpg" data-lightbox-caption="The Private Cinema: Dedicated 16-seat luxury cinema room with fiber-optic star ceiling and custom 9.4.6 Dolby Atmos audio architecture." class="featured-media-link" aria-label="Inspect The Private Cinema in full resolution">
+                <img src="assets/images/consultation-cinema.jpg" alt="The Private Cinema: Dedicated luxury home theatre with tiered recliner seating and starlight ceiling" class="featured-card-img" loading="lazy">
+                <span class="media-hover-zoom">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect View</span>
+                </span>
+              </a>
+              <span class="project-badge-pill">FEATURED INSTALLATION &bull; DEDICATED CINEMA</span>
+            </div>
+
+            <div class="featured-card-body">
+              <div class="featured-card-header">
+                <span class="featured-eyebrow">FLAGSHIP ESTATE SHOWCASE</span>
+                <h3 class="featured-title">The Private Cinema</h3>
+                <p class="featured-desc">
+                  A purpose-built luxury home theatre designed inside a subterranean estate retreat. Features acoustic decoupled walls, a custom micro-perforated 200-inch 4K screen with concealed front stage line-arrays, and motorized diamond-stitched leather recliners.
+                </p>
+              </div>
+
+              <!-- Structured Key Specs 4-Box Grid: Fills vertical space purposefully -->
+              <div class="featured-specs-grid">
+                <div class="spec-card-mini">
+                  <span class="spec-label">Audio Architecture</span>
+                  <strong class="spec-value">Dolby Atmos 9.4.6</strong>
+                  <span class="spec-sub">Concealed Line-Arrays</span>
+                </div>
+                <div class="spec-card-mini">
+                  <span class="spec-label">Optics & Display</span>
+                  <strong class="spec-value">200" Micro-Perf 4K</strong>
+                  <span class="spec-sub">Laser High-Lumen DCI</span>
+                </div>
+                <div class="spec-card-mini">
+                  <span class="spec-label">Room Optimization</span>
+                  <strong class="spec-value">Trinnov Altitude32</strong>
+                  <span class="spec-sub">32-Channel DSP Tuning</span>
+                </div>
+                <div class="spec-card-mini">
+                  <span class="spec-label">Interior Atmosphere</span>
+                  <strong class="spec-value">Fiber-Optic Star Sky</strong>
+                  <span class="spec-sub">16 Tiered Recliners</span>
+                </div>
+              </div>
+
+              <div class="featured-card-footer">
+                <a href="#consultation" class="btn btn-primary btn-sm">
+                  <span>Explore Case Study</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <span class="featured-meta-location">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Bel Air, California</span>
+                </span>
               </div>
             </div>
           </article>
 
-          <!-- Supporting Projects Stack -->
-          <div class="project-sub-col">
+          <!-- Supporting Projects Row: 2 Equal Columns Side-by-Side -->
+          <div class="portfolio-supporting-row">
             
             <!-- Project 2: The Living Room Experience -->
-            <article class="project-sub" id="project-living-room">
-              <a href="assets/images/project-living.jpg" data-lightbox-src="assets/images/project-living.jpg" data-lightbox-caption="The Living Room Experience: Discreet ceiling-recessed motorized projection and invisible surround sound in a luxury penthouse." style="display:block; overflow:hidden;">
-                <img src="assets/images/project-living.jpg" alt="The Living Room Experience: High-rise penthouse with motorized drop-down cinema screen" class="project-sub-img" loading="lazy">
-              </a>
-              <div class="project-sub-content">
-                <span class="project-badge">DISCREET ARCHITECTURAL INTEGRATION</span>
-                <h3 class="project-title">The Living Room Experience</h3>
-                <p class="project-desc">
-                  Discreet surround sound and large-screen entertainment engineered for an open-concept penthouse. The screen lowers whisper-quietly from ceiling reveal, leaving floor-to-ceiling city views untouched when not in use.
-                </p>
-                <div class="project-specs-list">
+            <article class="supporting-project-card" id="project-living-room">
+              <div class="supporting-card-media">
+                <a href="assets/images/project-living.jpg" data-lightbox-src="assets/images/project-living.jpg" data-lightbox-caption="The Living Room Experience: Discreet ceiling-recessed motorized projection and invisible surround sound in a luxury penthouse." class="featured-media-link" aria-label="Inspect The Living Room in full resolution">
+                  <img src="assets/images/project-living.jpg" alt="The Living Room Experience: High-rise penthouse with motorized drop-down cinema screen" class="supporting-card-img" loading="lazy">
+                  <span class="media-hover-zoom">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  </span>
+                </a>
+                <span class="project-badge-pill">DISCREET ARCHITECTURAL INTEGRATION</span>
+              </div>
+              <div class="supporting-card-body">
+                <div>
+                  <h3 class="supporting-title">The Living Room Experience</h3>
+                  <p class="supporting-desc">
+                    Discreet surround sound and large-screen entertainment engineered for an open-concept penthouse. The screen lowers whisper-quietly from ceiling reveal, leaving floor-to-ceiling city views untouched when not in use.
+                  </p>
+                </div>
+                <div class="supporting-specs-wrap">
                   <span class="spec-pill">Concealed Motorized Drop</span>
                   <span class="spec-pill">In-Ceiling Directional Audio</span>
                   <span class="spec-pill">Daylight ALR Optical Fabric</span>
+                </div>
+                <div class="supporting-card-footer">
+                  <a href="#consultation" class="service-explore-link">
+                    <span>Explore Installation</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                  <span class="supporting-meta">Tribeca Penthouse</span>
                 </div>
               </div>
             </article>
 
             <!-- Project 3: The Immersive Audio Room -->
-            <article class="project-sub" id="project-audio-room">
-              <a href="assets/images/project-acoustic.jpg" data-lightbox-src="assets/images/project-acoustic.jpg" data-lightbox-caption="The Immersive Audio Room: Two-channel reference audiophile listening sanctuary with sculpted timber diffusers." style="display:block; overflow:hidden;">
-                <img src="assets/images/project-acoustic.jpg" alt="The Immersive Audio Room: Audiophile sanctuary with reference floorstanding speakers and timber acoustic diffusers" class="project-sub-img" loading="lazy">
-              </a>
-              <div class="project-sub-content">
-                <span class="project-badge">AUDIOPHILE SANCTUARY</span>
-                <h3 class="project-title">The Immersive Audio Room</h3>
-                <p class="project-desc">
-                  Carefully integrated reference floorstanding speakers and mathematical quadratic-residue timber acoustic diffusers, creating a lifelike three-dimensional stereo soundstage for pure music listening.
-                </p>
-                <div class="project-specs-list">
+            <article class="supporting-project-card" id="project-audio-room">
+              <div class="supporting-card-media">
+                <a href="assets/images/project-acoustic.jpg" data-lightbox-src="assets/images/project-acoustic.jpg" data-lightbox-caption="The Immersive Audio Room: Two-channel reference audiophile listening sanctuary with sculpted timber diffusers." class="featured-media-link" aria-label="Inspect The Audio Room in full resolution">
+                  <img src="assets/images/project-acoustic.jpg" alt="The Immersive Audio Room: Audiophile sanctuary with reference floorstanding speakers and timber acoustic diffusers" class="supporting-card-img" loading="lazy">
+                  <span class="media-hover-zoom">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  </span>
+                </a>
+                <span class="project-badge-pill">AUDIOPHILE SANCTUARY</span>
+              </div>
+              <div class="supporting-card-body">
+                <div>
+                  <h3 class="supporting-title">The Immersive Audio Room</h3>
+                  <p class="supporting-desc">
+                    Carefully integrated reference floorstanding speakers and mathematical quadratic-residue timber acoustic diffusers, creating a lifelike three-dimensional stereo soundstage for pure music listening.
+                  </p>
+                </div>
+                <div class="supporting-specs-wrap">
                   <span class="spec-pill">Custom Walnut Diffusers</span>
                   <span class="spec-pill">Pure Class-A Monoblocks</span>
                   <span class="spec-pill">Calibrated Sweet-Spot Seating</span>
+                </div>
+                <div class="supporting-card-footer">
+                  <a href="#consultation" class="service-explore-link">
+                    <span>Explore Installation</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                  <span class="supporting-meta">Aspen Sound Suite</span>
                 </div>
               </div>
             </article>
@@ -389,7 +406,7 @@
 
         <div class="portfolio-action-footer">
           <a href="#consultation" class="btn btn-secondary" id="btn-explore-gallery">
-            <span>Explore the Gallery & Case Studies</span>
+            <span>Explore All Residential Case Studies</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
@@ -873,111 +890,9 @@
   </main>
 
   <!-- ========================================================================
-       Footer Section
+       Shared Footer (injected by src/js/navbar.js)
        ======================================================================== -->
-  <footer class="site-footer" id="site-footer">
-    <div class="container-wide">
-      
-      <div class="footer-top-grid">
-        
-        <!-- Brand Summary -->
-        <div class="footer-brand">
-          <a href="#hero" class="brand-logo" aria-label="Aether Cinematics">
-            <div class="brand-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <span class="brand-text">
-              AETHER <span class="brand-badge">STUDIO</span>
-            </span>
-          </a>
-          <p>
-            Architectural audiovisual engineering and bespoke private cinema installations. Merging acoustic precision, high-fidelity hardware, and cinema-quality immersion for the world's finest residences.
-          </p>
-          <div style="margin-top: 1.5rem;" class="footer-social-links">
-            <a href="#" class="social-icon-btn" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="social-icon-btn" aria-label="Vimeo">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.8 6.5c-.3 3.6-2.6 8.5-6.9 14.8-4.4 6.4-8.1 9.6-11.1 9.6-1.9 0-3.5-1.7-4.8-5.2-.9-3.2-1.7-6.4-2.5-9.6C-1.8 12.8-2.6 11-3.3 11c-.2 0-.9.4-2 1.3l-1.3-1.6c1.4-1.2 2.8-2.5 4.3-3.8 2.2-1.9 3.8-2.9 4.8-3 2.5-.2 4 1.4 4.6 4.9.7 4.1 1.2 6.7 1.6 7.6.9 2.2 2 3.3 3.2 3.3 1 0 2.2-.9 3.7-2.7 1.5-1.8 2.3-3.6 2.3-5.3 0-1.7-.5-2.6-1.5-2.6-.5 0-1.1.1-1.7.3 1-3.3 2.9-4.9 5.8-4.8 2.1.1 3.1 1.4 3 4z" transform="scale(0.7) translate(4, 2)"/></svg>
-            </a>
-            <a href="#" class="social-icon-btn" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Services Column -->
-        <div>
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="#services" class="footer-link">Custom Home Theatre</a></li>
-            <li><a href="#services" class="footer-link">Surround Sound Systems</a></li>
-            <li><a href="#services" class="footer-link">Projector & ALR Screen</a></li>
-            <li><a href="#services" class="footer-link">Whole-Home Audio</a></li>
-            <li><a href="#technology" class="footer-link">Acoustic Room Tuning</a></li>
-            <li><a href="#technology" class="footer-link">Smart Lighting Scenes</a></li>
-          </ul>
-        </div>
-
-        <!-- Portfolio & Process -->
-        <div>
-          <h4 class="footer-col-title">Showcase</h4>
-          <ul class="footer-links-list">
-            <li><a href="#gallery" class="footer-link">The Private Cinema</a></li>
-            <li><a href="#gallery" class="footer-link">The Living Room</a></li>
-            <li><a href="#gallery" class="footer-link">The Audio Sanctuary</a></li>
-            <li><a href="#process" class="footer-link">Installation Process</a></li>
-            <li><a href="#why-us" class="footer-link">Acoustic Standards</a></li>
-          </ul>
-        </div>
-
-        <!-- Direct Contact -->
-        <div>
-          <h4 class="footer-col-title">Inquiries</h4>
-          <ul class="footer-links-list">
-            <li><a href="#consultation" class="footer-link">Book a Consultation</a></li>
-            <li><a href="tel:+18008922872" class="footer-link">+1 (800) 892-AURA</a></li>
-            <li><a href="mailto:bespoke@aethercinematics.com" class="footer-link">bespoke@aether.com</a></li>
-            <li><a href="#consultation" class="footer-link">Beverly Hills Studio</a></li>
-            <li><a href="#consultation" class="footer-link">Private Showing</a></li>
-          </ul>
-        </div>
-
-        <!-- Service Areas -->
-        <div>
-          <h4 class="footer-col-title">Service Areas</h4>
-          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
-            Serving private estates, penthouses, and luxury architectural residences nationwide:
-          </p>
-          <div class="service-cities-list">
-            <span class="city-badge">Beverly Hills</span>
-            <span class="city-badge">Aspen</span>
-            <span class="city-badge">Manhattan</span>
-            <span class="city-badge">Miami</span>
-            <span class="city-badge">Bel Air</span>
-            <span class="city-badge">London</span>
-            <span class="city-badge">Dubai</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2026 AETHER CINEMATICS LLC. All rights reserved. Architectural Sound & Vision.
-        </p>
-        <div class="footer-legal-links">
-          <a href="#" class="footer-legal-link">Privacy Policy</a>
-          <a href="#" class="footer-legal-link">Terms of Service</a>
-          <a href="#" class="footer-legal-link">Acoustic Specifications</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
+  <div id="site-footer"></div>
 
   <!-- ========================================================================
        Search Modal Overlay
@@ -1074,7 +989,9 @@
     </div>
   </div>
 
-  <!-- Main JavaScript Controller -->
+  <!-- Shared Layout, UI Helpers & Main JavaScript Controller -->
+  <script src="src/js/navbar.js"></script>
+  <script src="src/js/ui.js"></script>
   <script src="src/js/main.js"></script>
 </body>
 </html>

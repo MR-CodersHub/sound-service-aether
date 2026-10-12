@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights &mdash; Cinema, Acoustics & Technology | AETHER CINEMATICS</title>
+  <meta name="description" content="Design guides, acoustic science, buying advice and technology explainers from the Aether Cinematics engineering team.">
+  <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+  <link rel="stylesheet" href="../../src/css/style.css">
+  <link rel="stylesheet" href="../../src/css/theme.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><span>Blog</span></nav>
+          <div class="eyebrow">THE AETHER JOURNAL</div>
+          <h1>Notes From the Listening Room.</h1>
+          <p>Practical guides, acoustic science and honest buying advice written by the engineers who design and install our systems every day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacer-sm">
+      <div class="container">
+        <a href="blog-details.html?id=setup-guide" class="glass-card" style="display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding:0;overflow:hidden;">
+          <img src="../../assets/images/hero_cinema_room_1791737323128.jpg" alt="Featured article: dedicated home cinema planning" style="width:100%;height:100%;min-height:280px;object-fit:cover;">
+          <div style="padding:2.5rem 2.5rem 2.5rem 0;">
+            <span class="badge-tag">FEATURED GUIDE</span>
+            <h2 class="section-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-top:1rem;">The Complete Guide to Planning a Dedicated Home Cinema Room</h2>
+            <p class="section-desc">From room selection and seating geometry to acoustic treatment and projection throw distance, here is the master checklist we use before a single panel is fitted.</p>
+            <span class="blog-read-link" style="margin-top:1rem;">Read the full guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-spacer" style="padding-top:0;">
+      <div class="container">
+        <div class="blog-toolbar">
+          <div class="filter-chips" id="blog-filters"></div>
+          <div class="blog-search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="blog-search-input" placeholder="Search articles..." autocomplete="off" aria-label="Search articles">
+          </div>
+        </div>
+
+        <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.5rem;">
+          Showing <span id="blog-result-count">0 articles</span>
+        </p>
+
+        <div class="blog-grid" id="blog-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-spacer" style="background:linear-gradient(180deg,var(--bg-secondary),var(--bg-primary));">
+      <div class="container">
+        <div class="glass-card" style="text-align:center;max-width:720px;margin:0 auto;">
+          <div class="eyebrow" style="justify-content:center;">NEVER MISS AN INSIGHT</div>
+          <h2 class="section-title" style="font-size:clamp(1.6rem,2.6vw,2.2rem);">Get the Aether Journal</h2>
+          <p class="section-desc" style="margin:0 auto 2rem;">Monthly design notes, acoustic tips and new installation stories. No noise, just signal.</p>
+          <form class="newsletter-form js-validate" id="blog-newsletter" data-success="blog-newsletter-success" novalidate style="justify-content:center;">
+            <div class="form-group" style="flex:1;min-width:240px;">
+              <input type="email" name="email" class="form-input" placeholder="you@email.com" required>
+              <span class="form-error-msg">Please enter a valid email address.</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <div class="form-success-block" id="blog-newsletter-success" style="display:none;margin-top:1.25rem;">
+            <div class="inline-alert success" style="justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Success! Please check your inbox to confirm your subscription.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacer-sm">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Have a Question We Have Not Answered?</h2>
+            <p>Our engineers are happy to talk through your specific room, equipment or acoustic challenge.</p>
+          </div>
+          <div class="cta-band-actions">
+            <a href="contact.html" class="btn btn-primary">Ask Our Team</a>
+            <a href="FAQ.html" class="btn btn-secondary">Browse FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/ui.js"></script>
+  <script src="../../src/js/blog.js"></script>
+  <script src="../../src/js/form-validation.js"></script>
+</body>
+</html>

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBudgetChips();
   initConsultationForm();
   initLightbox();
+  initPortfolioViewSwitch();
   initScrollSpy();
 });
 
@@ -559,3 +560,30 @@ function initScrollSpy() {
     });
   });
 }
+
+/* ==========================================================================
+   10. Portfolio Showcase View Switcher (Featured Bento vs 3-Card Grid)
+   ========================================================================== */
+function initPortfolioViewSwitch() {
+  const switchContainer = document.getElementById('portfolio-view-switch');
+  const showcase = document.getElementById('portfolio-showcase');
+  if (!switchContainer || !showcase) return;
+
+  const buttons = switchContainer.querySelectorAll('.view-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const view = btn.getAttribute('data-view');
+      if (view === 'grid') {
+        showcase.classList.remove('layout-featured');
+        showcase.classList.add('layout-grid');
+      } else {
+        showcase.classList.remove('layout-grid');
+        showcase.classList.add('layout-featured');
+      }
+    });
+  });
+}
+
