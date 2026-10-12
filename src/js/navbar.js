@@ -144,12 +144,11 @@
                   '<span class="profile-avatar">' + ICON.user + '</span>' +
                 '</button>' +
                 '<div class="profile-dropdown" id="profile-dropdown" role="menu">' +
-                  '<div class="dropdown-header"><strong>Welcome</strong><span>Access your Aether account</span></div>' +
-                  '<a href="' + PAGES.login + '" class="dropdown-item" role="menuitem">' + ICON.login + ' Login</a>' +
-                  '<a href="' + PAGES.signup + '" class="dropdown-item" role="menuitem">' + ICON.signup + ' Sign Up</a>' +
+                  '<div class="dropdown-header"><strong>Client Portal</strong><span>Private consultations & inquiries</span></div>' +
+                  '<a href="' + PAGES.login + '" class="dropdown-item" role="menuitem">' + ICON.login + ' Sign In</a>' +
+                  '<a href="' + PAGES.signup + '" class="dropdown-item" role="menuitem">' + ICON.signup + ' Create Account</a>' +
                   '<div class="dropdown-divider"></div>' +
-                  '<a href="' + PAGES.admin + '" class="dropdown-item" role="menuitem">' + ICON.admin + ' Admin Dashboard</a>' +
-                  '<a href="' + PAGES.user + '" class="dropdown-item" role="menuitem">' + ICON.dashboard + ' User Dashboard</a>' +
+                  '<a href="' + PAGES.contact + '" class="dropdown-item" role="menuitem">' + ICON.dashboard + ' Request Consultation</a>' +
                 '</div>' +
               '</div>' +
               '<button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open mobile navigation menu">' +

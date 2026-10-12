@@ -8,6 +8,17 @@
   <link rel="icon" type="image/png" href="../../assets/images/logo.png">
   <link rel="stylesheet" href="../../src/css/style.css">
   <link rel="stylesheet" href="../../src/css/theme.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('aether-theme'); } catch (e) {}
+      var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersLight ? 'light' : 'dark'));
+      try {
+        if (localStorage.getItem('aether-rtl') === '1') document.documentElement.setAttribute('dir', 'rtl');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 

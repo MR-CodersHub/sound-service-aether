@@ -740,153 +740,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ========================================================================
-         Contact and Consultation Form Section
-         ======================================================================== -->
-    <section class="section-spacer booking-form-section" id="consultation">
-      <div class="container">
-        <div class="form-layout">
-          
-          <!-- Contact Left Column -->
-          <div class="form-info-col">
-            <div class="eyebrow">PRIVATE ADVISORY</div>
-            <h3>Begin Your Acoustic Journey.</h3>
-            <p>
-              Whether you are designing a ground-up dedicated cinema, retrofitting a luxury living room, or outfitting an entire architectural estate with multi-room sound, our acoustic architects are at your service.
-            </p>
-
-            <div class="direct-contacts">
-              <div class="contact-card-mini">
-                <div class="contact-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <div class="contact-meta">
-                  <span>Concierge Hotline</span>
-                  <strong>+1 (800) 892-AURA (2872)</strong>
-                </div>
-              </div>
-
-              <div class="contact-card-mini">
-                <div class="contact-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </div>
-                <div class="contact-meta">
-                  <span>Direct Inquiries</span>
-                  <strong>bespoke@aethercinematics.com</strong>
-                </div>
-              </div>
-
-              <div class="contact-card-mini">
-                <div class="contact-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div class="contact-meta">
-                  <span>Studio & Private Showroom</span>
-                  <strong>9440 Wilshire Blvd, Beverly Hills, CA</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- The Consultation Form Card -->
-          <div class="form-card">
-            <form id="consultation-form" novalidate>
-              <div class="form-grid">
-                
-                <!-- Full Name -->
-                <div class="form-group">
-                  <label for="client-name" class="form-label">
-                    Full Name <span class="req">*</span>
-                  </label>
-                  <input type="text" id="client-name" name="name" class="form-input" placeholder="e.g. Julian Montgomery" required>
-                  <span class="form-error-msg">Please enter your full name.</span>
-                </div>
-
-                <!-- Email Address -->
-                <div class="form-group">
-                  <label for="client-email" class="form-label">
-                    Email Address <span class="req">*</span>
-                  </label>
-                  <input type="email" id="client-email" name="email" class="form-input" placeholder="e.g. julian@estate.com" required>
-                  <span class="form-error-msg">Please enter a valid email address.</span>
-                </div>
-
-                <!-- Phone Number -->
-                <div class="form-group">
-                  <label for="client-phone" class="form-label">
-                    Phone Number <span class="req">*</span>
-                  </label>
-                  <input type="tel" id="client-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
-                  <span class="form-error-msg">Please provide a valid contact number.</span>
-                </div>
-
-                <!-- Installation Type -->
-                <div class="form-group">
-                  <label for="installation-type" class="form-label">
-                    Installation Type <span class="req">*</span>
-                  </label>
-                  <select id="installation-type" name="installationType" class="form-select" required>
-                    <option value="" disabled selected>Select service focus...</option>
-                    <option value="theatre">Custom Home Theatre</option>
-                    <option value="surround">Surround Sound Installation</option>
-                    <option value="projector">Projector & Screen Installation</option>
-                    <option value="whole-home">Whole-Home Audio</option>
-                    <option value="multiple">Multiple Services</option>
-                    <option value="unsure">Not sure yet (Need advisory)</option>
-                  </select>
-                  <span class="form-error-msg">Please select an installation type.</span>
-                </div>
-
-                <!-- Preferred Consultation Date -->
-                <div class="form-group">
-                  <label for="consult-date" class="form-label">Preferred Date</label>
-                  <input type="date" id="consult-date" name="consultDate" class="form-input">
-                </div>
-
-                <!-- Project Location -->
-                <div class="form-group">
-                  <label for="project-location" class="form-label">Project Location (City / Zip)</label>
-                  <input type="text" id="project-location" name="location" class="form-input" placeholder="e.g. Beverly Hills / 90210">
-                </div>
-
-                <!-- Estimated Budget Range Chips -->
-                <div class="form-group form-group-full">
-                  <label class="form-label">Estimated Project Budget</label>
-                  <input type="hidden" id="budget-input" name="budget" value="$30k - $75k">
-                  <div class="budget-options-wrap">
-                    <div class="budget-chip" data-value="$15k - $30k">$15k &ndash; $30k</div>
-                    <div class="budget-chip active" data-value="$30k - $75k">$30k &ndash; $75k</div>
-                    <div class="budget-chip" data-value="$75k - $150k">$75k &ndash; $150k</div>
-                    <div class="budget-chip" data-value="$150k+">$150k+ (Bespoke)</div>
-                  </div>
-                </div>
-
-                <!-- Project Requirements / Message -->
-                <div class="form-group form-group-full">
-                  <label for="project-notes" class="form-label">Project Requirements & Room Vision</label>
-                  <textarea id="project-notes" name="notes" class="form-textarea" placeholder="Tell us about the room dimensions, intended use, preferred aesthetics, existing wiring, or specific audiovisual equipment you admire..."></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="form-group form-group-full" style="margin-top: 1rem;">
-                  <button type="submit" class="btn btn-primary" id="submit-consultation-btn" style="width: 100%; padding: 1.1rem;">
-                    <span>Request Consultation</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                  </button>
-                  <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem;">
-                    Strict confidentiality assured. Non-disclosure agreements available upon request.
-                  </p>
-                </div>
-
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- ========================================================================
@@ -950,21 +803,21 @@
       </h3>
 
       <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.8rem;">
-        Thank you, <strong id="confirm-client-name" style="color: #FFFFFF;">Client</strong>. Your private consultation request for <strong id="confirm-service-type" style="color: var(--lavender-soft);">Custom Installation</strong> has been assigned to our senior acoustic architectural director.
+        Thank you, <strong id="confirm-client-name" style="color: var(--text-primary);">Client</strong>. Your private consultation request for <strong id="confirm-service-type" style="color: var(--purple-bright);">Custom Installation</strong> has been assigned to our senior acoustic architectural director.
       </p>
 
-      <div style="background: rgba(5, 7, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.75rem; text-align: left; font-size: 0.85rem;">
+      <div class="confirm-summary-box" style="background: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.75rem; text-align: left; font-size: 0.85rem;">
         <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
           <span style="color: var(--text-muted);">Reference ID:</span>
           <span style="font-family: var(--font-mono); color: var(--purple-bright); font-weight: 700;" id="confirm-ref-code">#AET-4982</span>
         </div>
         <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem;">
           <span style="color: var(--text-muted);">Confirmation Sent:</span>
-          <span style="color: #FFFFFF;" id="confirm-client-email">email@domain.com</span>
+          <span style="color: var(--text-primary);" id="confirm-client-email">email@domain.com</span>
         </div>
         <div style="display:flex; justify-content:space-between;">
           <span style="color: var(--text-muted);">Concierge Callback:</span>
-          <span style="color: #FFFFFF;">Within 2 Business Hours</span>
+          <span style="color: var(--text-primary);">Within 2 Business Hours</span>
         </div>
       </div>
 
