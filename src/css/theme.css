@@ -1203,7 +1203,6 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: var(--nav-height);
 }
 
 .auth-aside {
@@ -1359,6 +1358,110 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.social-btn .social-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Auth Brand Logo */
+.auth-card-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.auth-card-logo:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.auth-aside-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.auth-aside-logo:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Password Eye Toggle */
+.password-field-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-field-wrap .form-input {
+  padding-right: 3rem;
+  width: 100%;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0.45rem;
+  margin: 0;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+  line-height: 1;
+  z-index: 2;
+}
+
+.password-toggle-btn:hover {
+  color: var(--purple-bright);
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.password-toggle-btn:focus-visible {
+  outline: 2px solid var(--purple-bright);
+  outline-offset: 1px;
+  color: var(--purple-bright);
+}
+
+.password-toggle-btn.is-visible {
+  color: var(--purple-bright);
+}
+
+.password-toggle-btn .eye-icon {
+  width: 19px;
+  height: 19px;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================

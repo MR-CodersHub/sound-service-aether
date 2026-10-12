@@ -103,6 +103,14 @@
         original.disabled = false;
       }, 2600);
     }
+
+    // Auto-redirect if data-redirect is configured
+    var redirectUrl = form.getAttribute('data-redirect');
+    if (redirectUrl) {
+      setTimeout(function () {
+        window.location.href = redirectUrl;
+      }, 1200);
+    }
   }
 
   function resetHandlers(form) {
@@ -142,6 +150,33 @@
         var block = btn.closest('.form-success-block');
         if (block) block.style.display = 'none';
         if (form) form.style.display = '';
+      });
+    });
+
+    // Password visibility eye toggle
+    initPasswordToggles();
+  }
+
+  function initPasswordToggles() {
+    document.querySelectorAll('.password-toggle-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = btn.getAttribute('data-target');
+        var input = targetId ? document.getElementById(targetId) : (btn.closest('.password-field-wrap') ? btn.closest('.password-field-wrap').querySelector('input') : null);
+        if (!input) return;
+
+        var isPassword = input.getAttribute('type') === 'password';
+        input.setAttribute('type', isPassword ? 'text' : 'password');
+
+        btn.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+        btn.classList.toggle('is-visible', isPassword);
+
+        var showIcon = btn.querySelector('.eye-show');
+        var hideIcon = btn.querySelector('.eye-hide');
+        if (showIcon && hideIcon) {
+          showIcon.style.display = isPassword ? 'none' : 'block';
+          hideIcon.style.display = isPassword ? 'block' : 'none';
+        }
       });
     });
   }

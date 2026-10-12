@@ -17,9 +17,16 @@
     if (idx !== -1) {
       var after = path.slice(idx + 1);
       var depth = after.split('/').length - 1;
-      return new Array(depth).join('../') + 'assets/images/';
+      var prefix = '';
+      for (var i = 0; i < depth; i++) {
+        prefix += '../';
+      }
+      return prefix + 'assets/images/';
     }
-    return 'assets/images/';
+    if (path.indexOf('/pages/') !== -1) {
+      return '../../assets/images/';
+    }
+    return '../../assets/images/';
   }
 
   var A = assetBase();

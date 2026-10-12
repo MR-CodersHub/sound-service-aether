@@ -13,9 +13,16 @@
     if (idx !== -1) {
       var after = path.slice(idx + 1);
       var depth = after.split('/').length - 1;
-      return new Array(depth).join('../') + 'assets/images/';
+      var prefix = '';
+      for (var i = 0; i < depth; i++) {
+        prefix += '../';
+      }
+      return prefix + 'assets/images/';
     }
-    return 'assets/images/';
+    if (path.indexOf('/pages/') !== -1) {
+      return '../../assets/images/';
+    }
+    return '../../assets/images/';
   }
 
   var A = assetBase();
@@ -249,7 +256,19 @@
     set('service-tagline', s.tagline);
     set('service-desc', s.description);
     var img = document.getElementById('service-hero-img');
-    if (img) { img.src = A + s.image; img.alt = s.name; }
+    if (img) {
+      img.src = A + s.image;
+      img.alt = s.name;
+      img.onerror = function () {
+        if (!this.getAttribute('data-fallback')) {
+          this.setAttribute('data-fallback', '1');
+          this.src = '../../assets/images/' + s.image;
+        } else if (this.getAttribute('data-fallback') === '1') {
+          this.setAttribute('data-fallback', '2');
+          this.src = '../assets/images/' + s.image;
+        }
+      };
+    }
 
     var specs = document.getElementById('service-specs');
     if (specs) specs.innerHTML = s.specs.map(function (sp) { return '<span class="spec-pill">' + sp + '</span>'; }).join('');
